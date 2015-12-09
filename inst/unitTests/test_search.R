@@ -22,13 +22,12 @@ test.ret_content <- function() {
             msg = "res should be get an accession entry")
 }
 
-test.ret_warning <- function() {
-  searchTerm = "asdf"
-  obs = tryCatch(searchEncode(searchTerm, limit),error=function(e) e, warning=conditionMessage)
-  exp = "No result found"
-  msg = "The function shouldn't return any results for the search AABBCC"
-  
-  checkIdentical(obs, exp, msg)
-}
-
-
+# Deprecated, incorrect search term now returns error.
+#test.ret_warning <- function() {
+#  searchTerm = "asdf"
+#  obs = tryCatch(searchEncode(searchTerm, limit),error=function(e) e, warning=conditionMessage)
+#  exp = "No result found"
+#  msg = "The function shouldn't return any results for the search AABBCC"
+#  
+#  checkIdentical(obs, exp, msg)
+#}
