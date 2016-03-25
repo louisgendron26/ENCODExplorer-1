@@ -55,6 +55,8 @@ clean_table <- function(table) {
         column <- NULL
       } else if (column_name == "@type") {
         column <- NULL
+      } else if (column_name == "replicates") {
+        column <- NULL
         # List of character vector
       } else if (all(sapply(column, class) == "character")) {
         if (all(sapply(column, length) <= 1)) {
