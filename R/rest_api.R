@@ -130,6 +130,7 @@ clean_table <- function(table) {
   table <- lapply(colnames(table), clean_column)
   names(table) <- table_names
   table[sapply(table, is.null)] <- NULL
+  table[sapply(table, is.list)] <- NULL
   as.data.frame(table)
 }
 
